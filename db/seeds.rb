@@ -1,3 +1,9 @@
+User.destroy_all 
+Job.destroy_all 
+Resume.destroy_all 
+Note.destroy_all
+UserTask.destroy_all
+JobTask.destroy_all
 
 anam = User.create(username: "AnamSoomro")
 paul = User.create(username: "PaulHoffart")
