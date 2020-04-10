@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_09_013107) do
+ActiveRecord::Schema.define(version: 2020_04_10_180543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(version: 2020_04_09_013107) do
   create_table "resumes", force: :cascade do |t|
     t.string "url"
     t.integer "job_id"
+  end
+
+  create_table "user_notes", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.string "category"
+    t.integer "user_id"
   end
 
   create_table "user_tasks", force: :cascade do |t|

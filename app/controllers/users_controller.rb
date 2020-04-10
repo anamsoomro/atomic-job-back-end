@@ -11,7 +11,4 @@ class UsersController < ApplicationController
     #users/3 {jobs: [], toDos: [], companies: []}
   end
 
-
-
-
 end
