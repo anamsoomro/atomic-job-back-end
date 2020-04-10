@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  has_secure_password
+
   has_many :user_tasks 
   has_many :jobs
   has_many :job_tasks, through: :jobs
