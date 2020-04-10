@@ -4,6 +4,7 @@ Resume.destroy_all
 Note.destroy_all
 UserTask.destroy_all
 JobTask.destroy_all
+UserNote.destroy_all
 
 anam = User.create(username: "AnamSoomro")
 paul = User.create(username: "PaulHoffart")
@@ -36,6 +37,14 @@ job_task3 = JobTask.create(item: "reach out to alumni", closed: "false", job_id:
 job_task4 = JobTask.create(item: "call george for a referral ", closed: "false", job_id: job3.id)
 job_task5 = JobTask.create(item: "let coach know", closed: "true", job_id: job3.id)
 job_task6 = JobTask.create(item: "update resume", closed: "false", job_id: job4.id)
+
+UserNote.create(title: "hackathon 1", content: "heres some note about a hackathon", category: "event", user_id: paul.id)
+UserNote.create(title: "hackathon 1", content: "heres some note about a hackathon", category: "event", user_id: anam.id)
+UserNote.create(title: "company 1",content: "heres some note about a company", category: "company", user_id: anam.id)
+UserNote.create(title: "lead 1",content: "heres some note about a lead", category: "lead", user_id: anam.id)
+
+
+
 
 
 
