@@ -19,10 +19,15 @@ class JobsController < ApplicationController
     render json: job
   end
 
+  def create
+    newJob = Job.create(strong_params)
+    render json: newJob
+  end
+
   private 
 
   def strong_params
-    params.require(:job).permit(:status)
+    params.require(:job).permit(:title, :company, :status, :interview, :location, :url, :user_id)
   end
 
 
