@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   get "/users/:id/jobs", to: "jobs#index"
+  get "/users/:id/notes", to: "user_notes#index"
+
   
 
   post "/login", to: "auth#login"
