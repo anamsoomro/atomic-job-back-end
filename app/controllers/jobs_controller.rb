@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   def index 
     user = User.find(params[:id])
     jobs = user.jobs 
+    jobs.empty? ? jobs = false : jobs = jobs
     render json: jobs
   end
 
