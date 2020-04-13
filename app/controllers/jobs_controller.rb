@@ -24,6 +24,14 @@ class JobsController < ApplicationController
     render json: newJob
   end
 
+  def destroy 
+    job = Job.find(params[:id])
+    user = User.find(job.user_id)
+    job.destroy()
+    jobs = user.jobs 
+    render json: jobs
+  end
+
   private 
 
   def strong_params
