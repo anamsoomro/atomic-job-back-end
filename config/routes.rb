@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get "/users/:id/jobs", to: "jobs#index"
   get "/users/:id/notes", to: "user_notes#index"
+  get "/users/:id/tasks", to: "user_tasks#index"
 
   
 
