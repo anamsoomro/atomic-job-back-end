@@ -18,6 +18,17 @@ class JobsController < ApplicationController
     job = Job.find(params[:id])
     job.update(strong_params)
     render json: job
+    # # have a model method that checks to see if swith not applied follow-up 
+    # # if true, date_appled = Date.today or something
+    # job = Job.find(params[:id])
+    # prevStatus = job.status
+    # newStatus = strong_params.status
+    # if prevStatus === "Not Applied" && newStatus === "follow-up"
+    #   date_applied = Time.now.to_s.slice(0, 10)  #"2020-04-14" 
+    # end
+    # # but now what if the user wanted to select their own date 
+    # job.update(strong_params)
+    # render json: job
   end
 
   def create
