@@ -9,8 +9,8 @@ UserNote.destroy_all
 anam = User.create(username: "AnamSoomro")
 paul = User.create(username: "PaulHoffart")
 
-job1 = Job.create(title: "Anam Job 1 at Company 1", company: "Company 1", status: "apply", interview: "false", location: "Houston", user_id: anam.id, url: "https://beckgroup.applicantpro.com/jobs/1331191.html")
-job2 = Job.create(title: "Anam Job 2 at Company 2", company: "Company 2", status: "apply", interview: "false", location: "Houston", user_id: anam.id, url: "https://beckgroup.applicantpro.com/jobs/1357860.html")
+job1 = Job.create(title: "Anam Job 1 at Company 1", company: "Company 1", status: "not applied", interview: "false", location: "Houston", user_id: anam.id, url: "https://beckgroup.applicantpro.com/jobs/1331191.html")
+job2 = Job.create(title: "Anam Job 2 at Company 2", company: "Company 2", status: "not applied", interview: "false", location: "Houston", user_id: anam.id, url: "https://beckgroup.applicantpro.com/jobs/1357860.html")
 job3 = Job.create(title: "Anam Job 3 at Company 1", company: "Company 1", status: "follow-up", interview: "true", location: "Houston", user_id: anam.id, url: "https://beckgroup.applicantpro.com/jobs/1357867.html" )
 job4 = Job.create(title: "Paul Job 4 at Company 1", company: "Company 1", status: "closed", interview: "false", location: "Houston", user_id: paul.id, url: "https://beckgroup.applicantpro.com/jobs/1339552.html" )
 
