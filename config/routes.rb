@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get "/users/:id/jobs", to: "jobs#index"
   get "/users/:id/notes", to: "user_notes#index"
   get "/users/:id/tasks", to: "user_tasks#index"
-
+  get '/stats', to: "application#app_stats"
   
 
   post "/login", to: "auth#login"

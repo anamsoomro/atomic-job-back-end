@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::API
+  
   before_action :require_login
+  skip_before_action :require_login, only: :app_stats
 
   def encode_token(payload)
       JWT.encode(payload, 'my_secret')
@@ -38,5 +40,15 @@ class ApplicationController < ActionController::API
 
   def require_login
    render json: {message: 'Please Login'}, status: :unauthorized unless logged_in?
+  end
+
+  def app_stats
+    stats = [
+      {name: "Users registered", value: User.all.count},
+      {name: "Job Postings saved", value: Job.all.count},
+      {name: "Tasks assigned", value: JobTask.all.count + UserTask.all.count},
+      {name: "Notes Created", value: Note.all.count + UserNote.all.count}
+    ]
+    render json: stats
   end
 end
