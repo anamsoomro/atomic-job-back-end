@@ -47,7 +47,7 @@ class JobsController < ApplicationController
   private 
 
   def strong_params
-    params.require(:job).permit(:title, :company, :status, :interview, :location, :url, :user_id)
+    params.require(:job).permit(:title, :company, :status, :interview, :location, :url, :user_id, :dateApplied)
   end
 
 
